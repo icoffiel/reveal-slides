@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/svg+xml" href="/vite.svg">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reveal Slides</title>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>First Slide</section>
+                <section>Second Slide</section>
+                <section>
+                    <section>Vertical Slide 1</section>
+                    <section>Vertical Slide 2</section>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        ## Slide 1
+                        A paragraph with some text and a [link](https://hakim.se).
+                        ---
+                        ## Slide 2
+                        ---
+                        ## Slide 3
+                    </textarea>
+                </section>
+                <section>
+                  <pre>
+                    <code data-trim data-noescape data-line-numbers="1|2|3">
+                (def lazy-fib
+                  (concat
+                   [0 1]
+                   ((fn rfib [a b]
+                        (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
+                  </code>
+                  </pre>
+                </section>
+                <section data-auto-animate>
+                    <h1>Auto-Animate</h1>
+                </section>
+                <section data-auto-animate>
+                    <h1 style="margin-top: 100px; color: red;">Auto-Animate</h1>
+                </section>
+                <section data-auto-animate>
+                    <pre data-id="code-animation">
+                        <code data-trim data-line-numbers>
+                            let planets = [
+                                { name: "Mercury", diameter: 487900000 },
+                                { name: "Venus", diameter: 121040000 },
+                                { name: "Earth", diameter: 127560000 }
+                            ]
+                        </code>
+                    </pre>
+                </section>
+                <section data-auto-animate>
+                    <pre data-id="code-animation">
+                        <code data-trim data-line-numbers>
+                            let planets = [
+                                { name: "Mercury", diameter: 487900000 },
+                                { name: "Venus", diameter: 121040000 },
+                                { name: "Earth", diameter: 127560000 },
+                                { name: "Mars", diameter: 629200000 },
+                            ]
+                        </code>
+                    </pre>
+                </section>
+            </div>
+        </div>
+        <script type="module" src="main.js"></script>
+    </body>
+</html>
